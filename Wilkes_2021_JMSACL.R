@@ -5,7 +5,17 @@ library(readxl)
 library(tidyr)
 
 ## Information ----
-# This section creates the models for the data with the following form, where t represents the Student-t distribution; y_ij represents the relative deviation value for the given sample j in run i; \beta_0 represents the overall intercept; \beta_1 represents the overall slope; x_ij represents the run position number for sample j in run i; u_i represents the identifier for run i; and \epsilon_ij represents the residual error (which is assumed to be Student t-distributed, with the degrees of freedom parameter \nu); median(x) represents the median; and MAD represents the median absolute deviation. Each parameter is given an weakly informative prior so as to allow the data to dominate the estimates. This approach allows the incorporation of prior knowledge to constrain the parameter values and allows easy production of prediction intervals on which to base IS acceptance criteria.
+# This section creates the models for the data with the following form, where t represents the Student-t distribution;
+# y_ij represents the relative deviation value for the given sample j in run i;
+# \beta_0 represents the overall intercept; \beta_1 represents the overall slope; 
+# x_ij represents the run position number for sample j in run i; 
+# u_i represents the identifier for run i; and \epsilon_ij represents the residual error 
+# (which is assumed to be Student t-distributed, with the degrees of freedom parameter \nu); 
+# median(x) represents the median; and MAD represents the median absolute deviation. 
+# Each parameter is given an weakly informative prior so as to allow the data to 
+# dominate the estimates. This approach allows the incorporation of prior knowledge 
+# to constrain the parameter values and allows easy production of prediction intervals 
+# on which to base IS acceptance criteria.
 
 # y_ij ~ t(\nu, \mu_ij, \sigma^2)
 # \mu_ij = \beta_0 + \beta_1*x_i + u_i + \epsilon_ij
