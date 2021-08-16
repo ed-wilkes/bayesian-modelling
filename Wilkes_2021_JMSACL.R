@@ -24,8 +24,9 @@ library(tidyr)
 # u ~ t(3, 0, MAD(y))
 # \nu ~ Gamma(2, 0.1)
   
- ## Modelling ----
-# Here it is assumed that the dependent variable in your data is entitled `Deviation`, run position is called `Number`, and independent assay run number is called `Run`.
+## Modelling ----
+# Here it is assumed that the dependent variable in your data is entitled `Deviation`, run position is called `Number`,
+# and independent assay run number is called `Run`.
 
 model <- brm(
   formula = bf(Deviation ~ Number + (1|Run)) # predict deviation by run position, grouped by "Run"
