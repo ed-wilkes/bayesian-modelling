@@ -18,7 +18,7 @@ library(tidyr)
 # on which to base IS acceptance criteria.
 
 # y_ij ~ t(\nu, \mu_ij, \sigma^2)
-# \mu_ij = \beta_0 + \beta_1*x_i + u_i + \epsilon_ij
+# \mu_ij = \beta_0 + \beta_1*x_i + u_i
 # \beta_0 ~ t(3, median(y), MAD(y))
 # \beta_1 ~ N(0, 1)
 # u ~ t(3, 0, MAD(y))
