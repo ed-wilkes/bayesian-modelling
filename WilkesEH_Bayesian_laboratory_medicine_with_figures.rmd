@@ -235,7 +235,7 @@ quantile(
 # Code snippet 7
 ```{r, snippet-7, warning=FALSE, message=FALSE}
 # Set the random seed for reproducibility
-set.seed(1234)
+set.seed(12345)
 
 # Generate some dummy data
 df_example_3 <- data.frame(
@@ -261,8 +261,8 @@ model_3 <- brm(
   ,data = df_example_3
   ,family = binomial # using the binomial likelihood
   ,prior = c(
-    prior(normal(0, 10), class = "Intercept") # prior on beta_0
-    ,prior(normal(0, 2.5), class = "b") # prior on beta_1
+    prior(normal(0, 1.5), class = "Intercept") # prior on beta_0
+    ,prior(normal(0, 1.5), class = "b") # prior on beta_1
   )
   ,seed = 1234
   ,refresh = 0
@@ -317,15 +317,15 @@ fig_2 <- ggplot(df_densities, aes(x = density_x, y = density_y_norm))+
 # Figure S3
 ```{r fig-s3, echo=FALSE, warning=FALSE, message=FALSE}
 # Beta_0
-fig_s3a <- ggplot(data.frame(x = c(-40, 40)), aes(x = x))+
-  stat_function(fun = dnorm, geom = "line", args = list(mean = 0, sd = 10))+
+fig_s3a <- ggplot(data.frame(x = c(-7, 7)), aes(x = x))+
+  stat_function(fun = dnorm, geom = "line", args = list(mean = 0, sd = 1.5))+
   theme_plot+
   xlab(expression(paste("Intercept value (", beta[0], ", mmol/L)")))+
   ylab("Density (A.U.)")
 
 # Beta_1
-fig_s3b <- ggplot(data.frame(x = c(-10, 10)), aes(x = x))+
-  stat_function(fun = dnorm, geom = "line", args = list(mean = 0, sd = 1))+
+fig_s3b <- ggplot(data.frame(x = c(-7, 7)), aes(x = x))+
+  stat_function(fun = dnorm, geom = "line", args = list(mean = 0, sd = 1.5))+
   theme_plot+
   xlab(expression(paste("Slope value (", beta[1], ", mmol/L)")))+
   ylab("Density (A.U.)")
