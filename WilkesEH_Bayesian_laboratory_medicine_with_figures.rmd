@@ -289,7 +289,7 @@ sum(difference < 0) / length(as.matrix(model_3)[,"b_Intercept"])
 ```
 
 # Figure 2
-```{r fig-2, echo=FALSE, message=FALSE, warning=FALSE}
+```{r fig-2, message=FALSE, warning=FALSE}
 df_densities <- data.frame(value = difference) %>%
   mutate(lwr = quantile(value, 0.025), upr = quantile(value, 0.975)) %>%
   summarise(
