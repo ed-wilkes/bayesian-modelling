@@ -2,7 +2,7 @@
 title: "Supplementary material: A practical guide to Bayesian statistics in laboratory medicine"
 author: "Wilkes EH"
 output: 
-  bookdown::pdf_document2:
+  bookdown::pdf_document2
 ---
 
 # Code snippet 1
@@ -100,7 +100,7 @@ t.test(calcium ~ treatment, data = df_example_2, paired = FALSE, var.equal = FAL
 ```
 
 # Figure 1
-```{r fig-1, echo=FALSE, warning=FALSE, message=FALSE, f}
+```{r fig-1, echo=FALSE, warning=FALSE, message=FALSE}
 # Figure 1A
 fig_1a <- ggplot(df_example_1, aes(x = treatment, y = calcium))+
   geom_jitter(width = 0.01, alpha = 0.5)+
