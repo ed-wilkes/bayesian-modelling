@@ -5,7 +5,7 @@ The code found within `Wilkes_2021_JMSACL.R` supersedes the `clusterBootSample` 
 
 The code found within `ClinChem_2022-hvac049_bayesian_laboratory_medicine_with_figures.rmd` is explored in [Wilkes (2022) *Clin Chem*](https://pubmed.ncbi.nlm.nih.gov/35708152/).
 
-# Citations
+## Citations
 If you find the functions within this repo useful for your own work, please consider citing the associated publications:
 
 ```
